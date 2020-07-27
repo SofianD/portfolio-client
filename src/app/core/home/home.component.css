@@ -1,0 +1,25 @@
+.halo {
+    -webkit-animation: halo 4s linear infinite alternate;
+            animation: halo 4s linear infinite alternate;
+}
+
+@keyframes halo {
+    0% {
+        text-shadow: none;
+    }
+    20% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.05), 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+    40% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.10), 0 0 30px rgba(255, 255, 255, 0.15);
+    }
+    60% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.20), 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+    80% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.40), 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.50), 0 0 60px rgba(255, 255, 255, 0.6);
+    }
+}
