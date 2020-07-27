@@ -1,0 +1,17 @@
+@font-face{
+    font-family: "HammerSmith";
+    src: url("/assets/police/HammersmithOne-Regular.ttf");
+}
+
+.navbar{
+    font-family: "HammerSmith", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face{
+    font-family: "Dosis";
+    src: url("/assets/police/Dosis-VariableFont_wght.ttf");
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0;
+    font-family: "Dosis", sans-serif;
+}
