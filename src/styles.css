@@ -21,7 +21,7 @@ p {
 }
 
 ::-moz-selection {
-    color: rgb(255, 251, 0);
+    color: rgb(230, 207, 0);
     background-color: black;
 }
 
