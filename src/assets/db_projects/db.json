@@ -7,7 +7,7 @@
             "images": [
                 "assets/db_projects/images/my_portfolio_v1/home.png"
             ],
-            "technos": "NodeJS Javascript/Typescript HTML CSS",
+            "technos": "NodeJS Javascript Typescript HTML CSS",
             "frameworks": "Angular NestJS",
             "url_website": "http://localhost:4200",
             "url_github": "https://github.com/SofianD/portfolio-client",
