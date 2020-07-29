@@ -1,8 +1,13 @@
 .navbar{
-    font-family: "HammerSmith", sans-serif;
+    font-family: 'HammerSmith', sans-serif;
+}
+
+a {
+    transition: 0.2s;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: inherit
+    font-size: 1.2rem;
+    color: inherit;
+    transition: 0.2s;
 }
