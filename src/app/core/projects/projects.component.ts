@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import db from "src/assets/db_projects/db.json";
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  projects: Array<any>;
 
-  ngOnInit() {
+  constructor() {
+    this.projects = db.projects
   }
-
+  ngOnInit() {
+    
+  }
+  
 }
