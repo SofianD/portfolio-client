@@ -2,11 +2,7 @@
     font-family: "HammerSmith", sans-serif;
 }
 
-a {
-    text-decoration: none;
-    color: inherit
-}
-
 a:hover {
     text-decoration: underline;
+    color: inherit
 }
