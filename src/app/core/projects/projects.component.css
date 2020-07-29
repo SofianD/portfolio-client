@@ -1,0 +1,13 @@
+.pj-title {
+    font-size: 2rem;
+    padding-bottom: 10px;
+    transition: 0.5s;
+}
+
+.pj-container:hover img {
+    cursor: pointer;
+}
+
+.pj-container {
+    background-color: rgb(247, 247, 247);
+}

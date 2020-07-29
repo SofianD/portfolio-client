@@ -1,1 +1,48 @@
-<p>projects works!</p>
+<div style="width: 100%; min-height: 80%;" class="d-flex mt-2">
+
+    <div class="row m-auto d-flex">
+
+        <div class="col-10 p-4 shadow pj-container text-center rounded mt-4 mb-auto mx-auto">
+
+            <p class="pj-title">
+                {{projects[0].name}}
+            </p>
+            
+            <div class="row text-justify">
+                
+                <div class="d-flex col-12 col-md-6 p-4">
+                    <img class="w-100 m-auto border" [src]="projects[0].images[0]" alt="">
+                </div>
+                <div class="d-flex flex-column col-12 col-md-6">
+
+                    <div class="my-auto">
+                        <p class="my-auto">
+                            <span style="font-size: 1.1rem;" class="font-weight-bold">Langages:</span> {{projects[0].technos}}
+                        </p>
+                        <p class="my-auto">
+                            <span style="font-size: 1.1rem;" class="font-weight-bold">Frameworks:</span> {{projects[0].frameworks}}
+                        </p>
+                    </div>
+
+                    <div class="my-auto">
+                        <!-- <p><span style="font-size: 1.1rem;" class="font-weight-bold">Description:</span></p> -->
+                        <p [innerHTML]="projects[0].description"></p>
+                        <p class="text-muted ml-auto">- {{projects[0].date}}</p>
+                    </div>
+                    
+                </div>
+                <div class="d-flex w-100">
+                    <a target="_blank" class="m-auto btn btn-light" [href]="projects[0].url_github">Github <img src="assets/logo/logo_github.png" alt="Lien GitHub"></a>
+                    <a target="_blank" class="m-auto btn btn-light" [href]="projects[0].url_website">Website</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+</div>
