@@ -17,10 +17,11 @@ body {
     background-color: rgb(240, 244, 242);
 }
 
-a {
+a, a:hover {
     text-decoration: none;
     color: inherit
 }
+
 
 p {
     margin-bottom: 0;
