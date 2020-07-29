@@ -6,8 +6,8 @@ import { ProjectsComponent } from './core/projects/projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgMaterialModule } from './shared/ng-material/ng-material.module';
 import { HomeComponent } from './core/home/home.component';
-import { NavComponent } from './nav/nav.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavComponent } from './component/nav/nav.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
