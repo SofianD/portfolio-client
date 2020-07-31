@@ -2,6 +2,10 @@
     font-family: 'HammerSmith', sans-serif;
 }
 
+.container{
+    max-width: 991px;
+}
+
 a {
     transition: 0.2s;
 }
@@ -10,4 +14,20 @@ a:hover {
     font-size: 1.2rem;
     color: inherit;
     transition: 0.2s;
+}
+
+.link-container {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 991px) {
+    .logo-container {
+        text-align: center;
+    }
+
+    .link-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
