@@ -1,5 +1,7 @@
 .navbar{
     font-family: 'HammerSmith', sans-serif;
+    background: linear-gradient(0, rgb(235, 235, 235), #ffffff, #ffffff, #ffffff, #ffffff);
+
 }
 
 .container{
@@ -10,8 +12,8 @@ a {
     transition: 0.2s;
 }
 
-a:hover {
-    font-size: 1.2rem;
+.link-container a:hover {
+    transform: scale(1.2);
     color: inherit;
     transition: 0.2s;
 }
