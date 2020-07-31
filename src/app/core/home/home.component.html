@@ -1,25 +1,36 @@
-<div class="d-flex" style="width: 100%; height: 80%; min-height: 500px; background-image: url('assets/home/pres_bg.jpg'); background-position: left top;">
+<div class="d-flex" style="width: 100%; height: 40%; min-height: 100px; background-image: url('assets/home/pres_bg.jpg'); background-position: center;">
     <div class="m-auto text-center w-100 tracking-in-expand" style="color: white;">
         <h2  class="halo">Développeur Web</h2>
         <h1 class="halo">Front-End & Back-End</h1>
         <br>
         <div style="height: 50px; width: 100px;" class="d-none d-md-block"></div>
-        <div>
+        <div class="d-none d-md-block">
             <p>Nodejs - Javascript - Python - HTML & CSS - SQL & NoSQL - Git...</p>
             <p>Angular - NestJS - MongoDB - MySQL - Express  - Electron - API REST...</p>
-            <p class="d-none d-md-block">Windows - Kali Linux - Ubuntu Linux</p>
+            <p>Windows - Kali Linux - Ubuntu Linux</p>
         </div>
     </div>
 </div>
-<div class="container" style="width: 100%; margin-top: 50px; padding: 0 100px;">
+
+
+<div class="container" style="width: 100%; margin-top: 50px; padding: 0 50px;">
     <h1 class="text-center">Bienvenue</h1>
     <p class="text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </div>
-<div class="container text-center" style="width: 100%; margin-top: 50px; padding: 0 100px;">
+
+
+<div class="d-none container-fluid d-md-flex skills-overview-container my-4 py-4">
+    <div *ngFor="let link of linksOfSkillsImg" class="col d-flex ">
+        <img class="w-100 my-auto skill-img" [src]="link" alt="Oui">
+    </div>
+</div>
+
+<div class="container text-center" style="width: 100%; margin-top: 50px; padding: 0 50px;">
     <h1 class="">Lorem Ipsum</h1>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </div>
+

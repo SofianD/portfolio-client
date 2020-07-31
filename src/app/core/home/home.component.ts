@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import db from "src/assets/db_projects/links-of-skills-img.json";
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  linksOfSkillsImg: string[];
+
+  constructor() {
+    this.linksOfSkillsImg = db.links;
+  }
 
   ngOnInit() {
   }
