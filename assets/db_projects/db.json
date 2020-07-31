@@ -1,0 +1,18 @@
+{
+    "projects": 
+    [
+        {
+            "name": "My Portfolio",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "images": [
+                "assets/db_projects/images/my_portfolio_v1/home.png"
+            ],
+            "technos": "NodeJS Javascript Typescript HTML CSS",
+            "frameworks": "Angular NestJS",
+            "url_website": "http://localhost:4200",
+            "url_github": "https://github.com/SofianD/portfolio-client",
+            "date": "1 aout 2020",
+            "index": 0
+        }
+    ]
+}
