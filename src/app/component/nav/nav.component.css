@@ -23,6 +23,9 @@ a {
     justify-content: flex-end;
 }
 
+.link-container a {
+    margin-left: 15px;
+}
 @media screen and (max-width: 991px) {
     .logo-container {
         text-align: center;
