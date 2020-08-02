@@ -26,6 +26,7 @@ a {
 .link-container a {
     margin-left: 15px;
 }
+
 @media screen and (max-width: 991px) {
     .logo-container {
         text-align: center;
@@ -34,5 +35,9 @@ a {
     .link-container {
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .link-container a {
+        margin-left: 0;
     }
 }
