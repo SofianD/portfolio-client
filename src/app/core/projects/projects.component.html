@@ -15,6 +15,46 @@
                 </div>
                 <div class="d-flex flex-column col-12 col-md-6 pj-details" style="font-size: 0.9rem;">
 
+                    <div class="my-auto text-center">
+                        <p class="my-auto">
+                            <span class="pj-subtitle">Langages</span><br>{{projects[0].technos}}
+                        </p>
+                        <br>
+                        <p class="my-auto">
+                            <span class="pj-subtitle">Frameworks</span><br>{{projects[0].frameworks}}
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="my-auto">
+                        <!-- <p><span style="font-size: 1.1rem;" class="font-weight-bold">Description:</span></p> -->
+                        <p [innerHTML]="projects[0].description"></p>
+                    </div>
+                    <p class="text-muted ml-auto">- {{projects[0].date}}</p>
+                    
+                </div>
+                <div class="d-flex w-100 my-2 link-btn-container mt-3 p-1">
+                    <a target="_blank" class="border btn btn-light pj-btn" [href]="projects[0].url_github">Github <img src="assets/logo/logo_github.png" alt="Lien GitHub"></a>
+                    <a target="_blank" class="border btn btn-light pj-btn" [href]="projects[0].url_website">Website</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="col-10 px-4 shadow pj-container text-center rounded mt-4 mb-auto mx-auto">
+
+            <p class="pj-title">
+                {{projects[0].name}}
+            </p>
+            
+            <div class="row text-justify">
+                
+                <div class="d-flex col-12 col-md-6 p-1">
+                    <img class="w-100 m-auto border img-pres" [src]="projects[0].images[0]" alt="">
+                </div>
+                <div class="d-flex flex-column col-12 col-md-6 pj-details" style="font-size: 0.9rem;">
+
                     <div class="my-auto">
                         <p class="my-auto">
                             <span class="pj-subtitle">Langages:</span><br>{{projects[0].technos}}

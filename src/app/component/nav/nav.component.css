@@ -1,5 +1,7 @@
 .navbar{
     font-family: 'HammerSmith', sans-serif;
+    background: linear-gradient(0, rgb(243, 243, 243), #ffffff, #ffffff, #ffffff, #ffffff);
+
 }
 
 .container{
@@ -10,8 +12,8 @@ a {
     transition: 0.2s;
 }
 
-a:hover {
-    font-size: 1.2rem;
+.link-container a:hover {
+    transform: scale(1.2);
     color: inherit;
     transition: 0.2s;
 }
@@ -19,6 +21,10 @@ a:hover {
 .link-container {
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.link-container a {
+    margin-left: 15px;
 }
 
 @media screen and (max-width: 991px) {
@@ -29,5 +35,9 @@ a:hover {
     .link-container {
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .link-container a {
+        margin-left: 0;
     }
 }

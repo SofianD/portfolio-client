@@ -15,6 +15,8 @@ body {
     margin: 0;
     font-family: "Dosis", sans-serif;
     background-color: rgb(240, 244, 242);
+    /* max-width: 2080px;
+    margin: 0 auto; */
 }
 
 a, a:hover {
