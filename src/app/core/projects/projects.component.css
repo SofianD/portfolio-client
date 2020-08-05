@@ -32,9 +32,18 @@
     justify-content: space-between;
 }
 
+.canvas-img {
+    position: fixed;
+    top: 0;
+    height: 200px;
+    background-color: crimson;
+    left: 0;
+    right: 0;
+}
+
 @media screen and (min-width: 920px) {
     .pj-container {
-        filter: grayscale(100%);
+        filter: saturate(90%);
         transition: 1s;
         max-width: 991px;
     }
@@ -52,6 +61,7 @@
     .pj-container:hover,
     .pj-container:focus {
         transition: 0.8s;
-        filter: grayscale(0);
+        filter: saturate(2);
+
     }    
 }
