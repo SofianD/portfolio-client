@@ -7,12 +7,68 @@
             "images": [
                 "assets/db_projects/images/my_portfolio_v1/home.png"
             ],
-            "technos": "NodeJS Javascript Typescript HTML CSS",
-            "frameworks": "Angular NestJS",
+            "technos": [
+                "NodeJS",
+                "Javascript",
+                "Typescript",
+                "HTML",
+                "CSS"],
+            "frameworks": [
+                "Angular",
+                "NestJS",
+                "Bootstrap"
+            ],
             "url_website": "/",
             "url_github": "https://github.com/SofianD/portfolio-client",
             "date": "1 aout 2020",
             "index": 0
+        },
+        {
+            "name": "Palais Des Beaux Arts de Lille",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "images": [
+                "assets/db_projects/images/pba/home.png",
+                "assets/db_projects/images/pba/home.png",
+                "assets/db_projects/images/pba/visiter.png",
+                "assets/db_projects/images/pba/mobile_home.png"
+            ],
+            "technos": [
+                "HTML",
+                "CSS"
+            ],
+            "frameworks": [
+                "Bootstrap"
+            ],
+            "url_website": "https://sofiand.github.io/PBA-Sofian-Jessy/",
+            "url_github": "https://github.com/SofianD/PBA-Sofian-Jessy",
+            "date": "1 septembre 2018",
+            "index": 1
+        },
+        {
+            "name": "Portfolio de Nicolas H.",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "images": [
+                "assets/db_projects/images/portfolio_nico/home.png",
+                "assets/db_projects/images/portfolio_nico/admin_img.png",
+                "assets/db_projects/images/portfolio_nico/admin_img2.png",
+                "assets/db_projects/images/portfolio_nico/overview_project.png"
+
+            ],
+            "technos": [
+                "NodeJS",
+                "Javascript",
+                "Typescript",
+                "HTML",
+                "CSS"
+            ],
+            "frameworks": [
+                "Angular",
+                "Bootstrap"
+            ],
+            "url_website": "http://www.nicolas-hallaert.fr/home",
+            "url_github": "",
+            "date": "1 janvier 2020",
+            "index": 2
         }
     ]
 }
