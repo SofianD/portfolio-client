@@ -51,7 +51,7 @@
 
     .pj-container:hover,
     .pj-container:focus {
-        transition: 0.5s;
+        transition: 0.8s;
         filter: grayscale(0);
     }    
 }

@@ -2,117 +2,52 @@
 
     <div class="row m-auto d-flex flex-column">
 
-        <div class="col-10 px-4 shadow pj-container text-center rounded mt-4 mb-auto mx-auto">
+        <div *ngFor="let project of projects" class="col-10 px-4 shadow pj-container text-center rounded mt-4 mb-auto mx-auto">
 
             <p class="pj-title">
-                {{projects[0].name}}
+                {{project.name}}
             </p>
             
             <div class="row text-justify">
                 
                 <div class="d-flex col-12 col-md-6 p-1">
-                    <img class="w-100 m-auto border img-pres" [src]="projects[0].images[0]" alt="">
+                    <img class="w-100 m-auto border img-pres" [src]="project.images[0]" alt="" (click)="showAllImages(project.images)">
                 </div>
                 <div class="d-flex flex-column col-12 col-md-6 pj-details" style="font-size: 0.9rem;">
 
                     <div class="my-auto text-center">
-                        <p class="my-auto">
-                            <span class="pj-subtitle">Langages</span><br>{{projects[0].technos}}
-                        </p>
+                        
+
+                        <div class="my-auto">
+                            <p>
+                                <span class="pj-subtitle">Langages</span><br>
+                                <span *ngFor="let skill of project.technos" class="badge badge-pill badge-primary mx-1">{{skill}}</span>
+
+                            </p>
+
+                        </div>
+
                         <br>
-                        <p class="my-auto">
-                            <span class="pj-subtitle">Frameworks</span><br>{{projects[0].frameworks}}
-                        </p>
+
+                        <div *ngIf="project.frameworks.length > 0" class="my-auto">
+                            <p>
+                                <span class="pj-subtitle">Frameworks</span><br>
+                                <span *ngFor="let fm of project.frameworks" class="badge badge-pill badge-warning mx-1">{{fm}}</span>
+                            </p>
+                        </div>
+
                     </div>
                     <hr>
                     <div class="my-auto">
                         <!-- <p><span style="font-size: 1.1rem;" class="font-weight-bold">Description:</span></p> -->
-                        <p [innerHTML]="projects[0].description"></p>
+                        <p [innerHTML]="project.description"></p>
                     </div>
-                    <p class="text-muted ml-auto">- {{projects[0].date}}</p>
+                    <p class="text-muted ml-auto">- {{project.date}}</p>
                     
                 </div>
                 <div class="d-flex w-100 my-2 link-btn-container mt-3 p-1">
-                    <a target="_blank" class="border btn btn-light pj-btn" [href]="projects[0].url_github">Github <img src="assets/logo/logo_github.png" alt="Lien GitHub"></a>
-                    <a target="_blank" class="border btn btn-light pj-btn" [href]="projects[0].url_website">Website</a>
-                </div>
-
-
-            </div>
-
-        </div>
-
-        <div class="col-10 px-4 shadow pj-container text-center rounded mt-4 mb-auto mx-auto">
-
-            <p class="pj-title">
-                {{projects[0].name}}
-            </p>
-            
-            <div class="row text-justify">
-                
-                <div class="d-flex col-12 col-md-6 p-1">
-                    <img class="w-100 m-auto border img-pres" [src]="projects[0].images[0]" alt="">
-                </div>
-                <div class="d-flex flex-column col-12 col-md-6 pj-details" style="font-size: 0.9rem;">
-
-                    <div class="my-auto">
-                        <p class="my-auto">
-                            <span class="pj-subtitle">Langages:</span><br>{{projects[0].technos}}
-                        </p>
-                        <p class="my-auto">
-                            <span class="pj-subtitle">Frameworks:</span><br>{{projects[0].frameworks}}
-                        </p>
-                    </div>
-                    <hr>
-                    <div class="my-auto">
-                        <!-- <p><span style="font-size: 1.1rem;" class="font-weight-bold">Description:</span></p> -->
-                        <p [innerHTML]="projects[0].description"></p>
-                        <p class="text-muted ml-auto">- {{projects[0].date}}</p>
-                    </div>
-                    
-                </div>
-                <div class="d-flex w-100 my-2">
-                    <a target="_blank" class="m-auto border btn btn-light pj-btn" [href]="projects[0].url_github">Github <img src="assets/logo/logo_github.png" alt="Lien GitHub"></a>
-                    <a target="_blank" class="m-auto border btn btn-light pj-btn" [href]="projects[0].url_website">Website</a>
-                </div>
-
-
-            </div>
-
-        </div>
-
-        <div class="col-10 px-4 shadow pj-container text-center rounded mt-4 mb-auto mx-auto">
-
-            <p class="pj-title">
-                {{projects[0].name}}
-            </p>
-            
-            <div class="row text-justify">
-                
-                <div class="d-flex col-12 col-md-6 p-1">
-                    <img class="w-100 m-auto border img-pres" [src]="projects[0].images[0]" alt="">
-                </div>
-                <div class="d-flex flex-column col-12 col-md-6 pj-details" style="font-size: 0.9rem;">
-
-                    <div class="my-auto">
-                        <p class="my-auto">
-                            <span class="pj-subtitle">Langages:</span><br>{{projects[0].technos}}
-                        </p>
-                        <p class="my-auto">
-                            <span class="pj-subtitle">Frameworks:</span><br>{{projects[0].frameworks}}
-                        </p>
-                    </div>
-                    <hr>
-                    <div class="my-auto">
-                        <!-- <p><span style="font-size: 1.1rem;" class="font-weight-bold">Description:</span></p> -->
-                        <p [innerHTML]="projects[0].description"></p>
-                        <p class="text-muted ml-auto">- {{projects[0].date}}</p>
-                    </div>
-                    
-                </div>
-                <div class="d-flex w-100 my-2">
-                    <a target="_blank" class="m-auto border btn btn-light pj-btn" [href]="projects[0].url_github">Github <img src="assets/logo/logo_github.png" alt="Lien GitHub"></a>
-                    <a target="_blank" class="m-auto border btn btn-light pj-btn" [href]="projects[0].url_website">Website</a>
+                    <a *ngIf="project.url_github.length > 0" target="_blank" class="border btn btn-light pj-btn" [href]="project.url_github">Github <img src="assets/logo/logo_github.png" alt="Lien GitHub"></a>
+                    <a *ngIf="project.url_website.length > 0" target="_blank" class="border btn btn-light pj-btn" [href]="project.url_website">Website</a>
                 </div>
 
 
@@ -121,5 +56,6 @@
         </div>
 
     </div>
-
 </div>
+
+
