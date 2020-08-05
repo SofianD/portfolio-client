@@ -38,7 +38,7 @@
     height: 100%;
     position: absolute;
     transform-style: preserve-3d;
-    transition: 2s;
+    transition: 2s ease-in-out;
 }
 
 .carousel__cell {
@@ -59,15 +59,6 @@
 .carousel__cell:nth-child(8) { transform: rotateY(144deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 300px;}
 .carousel__cell:nth-child(9) { transform: rotateY(216deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 300px;}
 .carousel__cell:nth-child(10) { transform: rotateY(288deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 300px;}
-
-
-
-
-
-
-
-
-
 
 
 
