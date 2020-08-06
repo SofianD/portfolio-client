@@ -8,7 +8,7 @@
                 "assets/db_projects/images/my_portfolio_v1/home.png"
             ],
             "technos": [
-                "NodeJS",
+                "Node.js",
                 "Javascript",
                 "Typescript",
                 "HTML",
@@ -27,7 +27,6 @@
             "name": "Palais Des Beaux Arts de Lille",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "images": [
-                "assets/db_projects/images/pba/home.png",
                 "assets/db_projects/images/pba/home.png",
                 "assets/db_projects/images/pba/visiter.png",
                 "assets/db_projects/images/pba/mobile_home.png"
@@ -55,7 +54,7 @@
 
             ],
             "technos": [
-                "NodeJS",
+                "Node.js",
                 "Javascript",
                 "Typescript",
                 "HTML",
@@ -65,7 +64,7 @@
                 "Angular",
                 "Bootstrap"
             ],
-            "url_website": "http://www.nicolas-hallaert.fr/home",
+            "url_website": "",
             "url_github": "",
             "date": "1 janvier 2020",
             "index": 2
