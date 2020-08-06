@@ -1,11 +1,14 @@
 .navbar{
     font-family: 'HammerSmith', sans-serif;
     background: linear-gradient(0, rgb(243, 243, 243), #ffffff, #ffffff, #ffffff, #ffffff);
-
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 .container{
-    max-width: 991px;
+    max-width: 1110px;
 }
 
 a {
