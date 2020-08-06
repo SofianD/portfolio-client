@@ -9,10 +9,26 @@ export class ProjectsComponent implements OnInit {
 
   projects: Array<any>;
 
+  shownImgs: any[] = [];
+  selectedImage: string = '';
+
   constructor() {
     this.projects = db.projects
   }
   ngOnInit() {
     
+  }
+
+  openImgCanvas(images: any[]) {
+    this.shownImgs = images;
+    this.selectImage(this.shownImgs[0])
+  }
+
+  closeImgCanvas() {
+    this.shownImgs = [];
+  }
+
+  selectImage(imgPath: string) {
+    this.selectedImage = imgPath;
   }
 }

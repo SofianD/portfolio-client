@@ -1,3 +1,6 @@
+img {
+    cursor: pointer;
+}
 .pj-title {
     font-size: 2rem;
     padding-bottom: 10px;
@@ -14,7 +17,6 @@
 }
 
 .img-pres:hover {
-    cursor: pointer;
     /* filter: blur(2px); */
     transition: 0.5s;
 }
@@ -35,23 +37,45 @@
 .canvas-img {
     position: fixed;
     top: 0;
-    height: 200px;
-    background-color: crimson;
-    left: 0;
-    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(33, 34, 22, 0.69);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.images-container {
+    width: 100%;
+    max-width: 1080px;
+}
+
+.desc-container {
+    text-align: center;
+}
+
+.fakeRow {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 919px) {
+    .salefdp {
+        padding: 0;
+    }
 }
 
 @media screen and (min-width: 920px) {
     .pj-container {
         filter: saturate(90%);
         transition: 1s;
-        max-width: 991px;
-    }
-    .pj-details {
-        font-size: 0.9rem;
+        max-width: 1110px;
     }
 
-
+    .fakeRow {
+        flex-direction: column;
+    }
 
     .blur {
         filter: blur(2px);
