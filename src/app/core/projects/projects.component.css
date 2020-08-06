@@ -84,8 +84,7 @@ img {
 
     .pj-container:hover,
     .pj-container:focus {
-        transition: 0.8s;
-        filter: saturate(2);
-
+        transition: 1s;
+        filter: saturate(150%);
     }    
 }
