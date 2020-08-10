@@ -36,10 +36,10 @@ img {
 
 .canvas-img {
     position: fixed;
-    top: 0;
+    top: 76px;
     bottom: 0;
     width: 100%;
-    background-color: rgba(33, 34, 22, 0.69);
+    background-color: rgba(33, 34, 22, 0.849);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +48,7 @@ img {
 
 .images-container {
     width: 100%;
-    max-width: 1080px;
+    max-width: 921px;
 }
 
 .desc-container {
