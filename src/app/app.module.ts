@@ -8,6 +8,9 @@ import { NgMaterialModule } from './shared/ng-material/ng-material.module';
 import { HomeComponent } from './core/home/home.component';
 import { NavComponent } from './component/nav/nav.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ActivitiesComponent } from './core/activities/activities.component';
+import { ActivitiesService } from './shared/services/activities.service';
 
 @NgModule({
   declarations: [
@@ -15,15 +18,19 @@ import { FooterComponent } from './component/footer/footer.component';
     ProjectsComponent,
     HomeComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    ActivitiesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     NgMaterialModule
   ],
-  providers: [],
+  providers: [
+    ActivitiesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
