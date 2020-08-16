@@ -1,0 +1,8 @@
+.act-body {
+    margin-top: 88px;
+    min-height: 80%;
+}
+
+.list-style-type-dec {
+    list-style-type: decimal-leading-zero;
+}
