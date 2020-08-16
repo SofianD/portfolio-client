@@ -15,44 +15,47 @@ export class ActivitiesService {
     try {
       res = await this.http.get('https://api.github.com/users/SofianD/events').toPromise();
     } catch (error) {
-      console.log("Can't get github data.");
+      console.log('Can\'t get github data.');
       return 'error';
     }
 
+    // tslint:disable-next-line: prefer-const
     let arr = [];
+    // tslint:disable-next-line: prefer-for-of
     for (let i = 0; i < res.length; i++) {
 
-      if (res[i].type === "PushEvent") {
+      if (res[i].type === 'PushEvent') {
         arr.push({
           id: res[i].id,
           type: res[i].type,
           repo: {
-            name: res[i].repo.name,
-            link: "http://github.com/" + res[i].repo.name
+            name: res[i].repo.name.split('/').pop(),
+            branch: res[i].payload.ref.split('/').pop(),
+            link: 'http://github.com/' + res[i].repo.name
           },
-          commits: res[i].payload.commits,
-          date: res[i].created_at
+          commits: res[i].payload.commits.map(x => x.message),
+          date: res[i].created_at.slice(0, 10).split('-').reverse().join('/')
         });
 
-      } else if (res[i].type === "PullRequestEvent") {
+      } else if (res[i].type === 'PullRequestEvent') {
         arr.push ({
           id: res[i].id,
           type: res[i].type,
           repo: {
-            name: res[i].repo.name,
-            link: "http://github.com/" + res[i].repo.name
+            name: res[i].repo.name.split('/').pop(),
+            link: 'http://github.com/' + res[i].repo.name
           },
-          opened: res[i].payload.action === "opened" ? true : false,
+          opened: res[i].payload.action === 'opened' ? true : false,
           date: res[i].created_at
         });
 
-      } else if (res[i].type === "CreateEvent" || res[i].type === "DeleteEvent") {
+      } else if (res[i].type === 'CreateEvent' || res[i].type === 'DeleteEvent') {
         arr.push ({
           id: res[i].id,
           type: res[i].type,
           repo: {
-            name: res[i].repo.name,
-            link: "http://github.com/" + res[i].repo.name
+            name: res[i].repo.name.split('/').pop(),
+            link: 'http://github.com/' + res[i].repo.name
           },
           payload: {
             name: res[i].payload.ref,
@@ -60,9 +63,13 @@ export class ActivitiesService {
           },
           date: res[i].created_at
         });
-      } 
+      }
     }
-
-    return arr;
+    console.log(arr);
+    return {
+      data: arr,
+      avatar: res[0].actor.avatar_url,
+      pseudo: res[0].actor.login
+    };
   }
 }
