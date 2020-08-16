@@ -8,7 +8,12 @@ import { ActivitiesService } from 'src/app/shared/services/activities.service';
 })
 export class ActivitiesComponent implements OnInit {
 
-  gh_activities: any[] = [];
+  isLoading = true;
+
+  ghActivities: any[] = [];
+  ghAvatar = '';
+  ghPseudo = '';
+  ghLink = '';
 
   constructor(
     private activitiesService: ActivitiesService
@@ -19,9 +24,13 @@ export class ActivitiesComponent implements OnInit {
   }
 
   async getGithubActivities() {
-    this.gh_activities = await this.activitiesService.getGhFeeds();
-    console.log(this.gh_activities)
+    this.isLoading = true;
+    const response = await this.activitiesService.getGhFeeds();
+    this.ghActivities = response.data;
+    this.ghAvatar = response.avatar;
+    this.ghPseudo = response.pseudo;
+    this.ghLink = 'https://github.com/' + this.ghPseudo;
+    this.isLoading = false;
   }
-
 
 }
