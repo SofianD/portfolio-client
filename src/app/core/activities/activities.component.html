@@ -1,1 +1,73 @@
-<p>activities works!</p>
+<div *ngIf="isLoading" class="container text-center bg-dark act-body">
+    <div class="row">
+        <div class="col-12">
+            <p>Chargement START</p>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!isLoading" class="container act-body">
+
+    <div *ngFor="let activity of ghActivities" class="row my-1">
+
+        <!-- PUSH EVENT -->
+        <div *ngIf="activity.type === 'PushEvent'" class="col-12">
+            <div class="row d-flex">
+
+                <div class="col-12 col-md-9 col-lg-7 m-auto border rounded p-1 bg-white">
+                    <div class="row w-100 m-0 d-flex" style="margin-top: 16px !important;">
+                        <div class="col-1 p-0 d-flex">
+                            <a class="m-auto" target="_blank" [href]="ghLink"><img class="w-100" [src]="ghAvatar" alt="Github avatar" style="max-width: 30px !important; border-radius: 100%;"></a>
+                            
+                        </div>
+                        <div class="col-11 p-0 pl-1 d-flex" style="justify-content: space-between; align-items: center;">
+                            <div>  
+                                <a class="font-weight-bold"  style="font-size: 1.1rem;" target="_blank" [href]="ghLink">{{ghPseudo}}</a>   
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row w-100 m-0 d-flex">
+                        <div class="col-1"></div>
+                        <div class="col-11 p-0 pl-1">
+                            <p>
+                                <span class="font-weight-bold">Repo: </span> <a target="_blank" [href]="activity.repo.link">{{activity.repo.name}}</a>
+                            </p>
+                            <p>
+                                <span class="font-weight-bold">Branch: </span> <a target="_blank" [href]="activity.repo.link + '/tree/' + activity.repo.branch">{{activity.repo.branch}}</a>
+                            </p>
+                            <p style="font-size: 0.8rem;">{{activity.date}}</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row w-100 m-0 d-flex">
+
+                        <div class="col-1"></div>
+                        
+                        <div class="col-11 p-0 pl-1">
+                            <p *ngIf="activity.commits.length <= 1" class="font-weight-bold">
+                                {{activity.commits.length}} commit:
+                            </p>
+                            <p *ngIf="activity.commits.length > 1" class="font-weight-bold">
+                                {{activity.commits.length}} commits:
+                            </p>
+                            <ul class="list-style-type-dec">
+                                <li *ngFor="let msg of activity.commits" style="font-size: 0.9rem;">
+                                    {{msg}}
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
