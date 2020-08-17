@@ -22,8 +22,12 @@ img {
 }
 
 .pj-container {
-    background: linear-gradient(-25deg, rgba(199, 197, 176, 0.397), #ffffff, #ffffff);
+    background: linear-gradient(0, #ffffff00, rgba(255, 255, 255, 0.432), rgba(255, 255, 255, 0.836));
     transition: 0.5s;
+}
+
+.pj-btn {
+    background-color: white;
 }
 
 .pj-btn:hover {

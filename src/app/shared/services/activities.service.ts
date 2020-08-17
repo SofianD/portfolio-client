@@ -65,7 +65,6 @@ export class ActivitiesService {
         });
       }
     }
-    console.log(arr);
     return {
       data: arr,
       avatar: res[0].actor.avatar_url,
