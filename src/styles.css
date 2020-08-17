@@ -14,7 +14,12 @@ html, body { height: 100%; }
 body { 
     margin: 0;
     font-family: "Dosis", sans-serif;
-    background-color: rgb(240, 244, 242);
+    background: linear-gradient(0, rgb(212, 212, 212), rgb(228, 228, 228), #ffffff, #ffffff);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-color: rgb(240, 244, 242); */
     /* max-width: 2080px;
     margin: 0 auto; */
 }
