@@ -14,7 +14,7 @@ html, body { height: 100%; }
 body { 
     margin: 0;
     font-family: "Dosis", sans-serif;
-    background: linear-gradient(0, rgb(212, 212, 212), rgb(228, 228, 228), #ffffff, #ffffff);
+    background: linear-gradient(0, rgb(212, 212, 212), rgb(228, 228, 228), #ffffff, #ffffff, #ffffff, #ffffff);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
