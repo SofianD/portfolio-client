@@ -5,6 +5,9 @@ img {
     font-size: 2rem;
     padding-bottom: 10px;
     transition: 0.5s;
+    -webkit-text-fill-color: rgb(179, 192, 3);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 .pj-subtitle {
