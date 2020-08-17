@@ -8,5 +8,13 @@
 }
 
 .gh-card {
-    background: linear-gradient(0, #ffffff00, rgba(255, 255, 255, 0.432), rgba(255, 255, 255, 0.836));
+    background: linear-gradient(0, #ffffff2a, rgba(255, 255, 255, 0.705), rgba(255, 255, 255, 0.836));
+}
+
+.badge-success a {
+    text-decoration: underline;
+}
+
+.gh-card-title {
+    background: rgba(74, 87, 86, 0.096);
 }
