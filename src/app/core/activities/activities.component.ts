@@ -28,11 +28,15 @@ export class ActivitiesComponent implements OnInit {
   async getGithubActivities() {
     this.isLoading = true;
     this.spinner.show();
-    const response = await this.activitiesService.getGhFeeds();
-    this.ghActivities = response.data;
-    this.ghAvatar = response.avatar;
-    this.ghPseudo = response.pseudo;
-    this.ghLink = 'https://github.com/' + this.ghPseudo;
+    try {
+      const response = await this.activitiesService.getGhFeeds();
+      this.ghActivities = response.data;
+      this.ghAvatar = response.avatar;
+      this.ghPseudo = response.pseudo;
+      this.ghLink = 'https://github.com/' + this.ghPseudo;
+    } catch (error) {
+      console.log('Cannot load data from the github API');
+    }
     this.isLoading = false;
     this.spinner.hide();
   }
