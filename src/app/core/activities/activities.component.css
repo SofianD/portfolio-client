@@ -9,6 +9,7 @@
     bottom: 100px;
     width: 200px;
     opacity: 0;
+    z-index: -1;
 }
 
 .list-style-type-dec {
