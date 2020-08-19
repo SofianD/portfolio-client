@@ -4,9 +4,9 @@
 }
 
 .octocat-container {
-    position: absolute;
+    position: fixed;
     right: 5%;
-    bottom: 100px;
+    bottom: 150px;
     width: 200px;
     opacity: 0;
     /* z-index: -1; */
