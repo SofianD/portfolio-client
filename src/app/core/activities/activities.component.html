@@ -1,3 +1,7 @@
+<div class="octocat-container">
+    <img class="w-100" src="/assets/global/octocat.png" alt="">
+</div>
+
 <div *ngIf="isLoading" class="container text-center bg-dark act-body">
     <div class="row">
         <div class="col-12">
@@ -20,18 +24,17 @@
                 <div class="col-12 col-md-9 col-lg-7 m-auto mt-4 rounded px-0 gh-card border">
                     <div class="row w-100 p-1 m-0 px-2 d-flex rounded-top gh-card-title border-bottom">
                         <div class="col-11 p-0 d-flex" style="justify-content: space-between; align-items: center;">
-                            <div class="d-flex"> 
+                            <div class="d-flex" style="flex-wrap: wrap; align-items: center;"> 
                                 <p>
-                                    <a class="font-weight-bold"  style="font-size: 1.1rem;" target="_blank" [href]="ghLink">{{ghPseudo}}</a>
+                                    <a class="font-weight-bold" target="_blank" [href]="ghLink">{{ghPseudo}}</a>
                                     
                                 </p>
-                                <p class="px-1">
-                                    <span class="badge badge-success">
+                                <p class="d-flex flex-wrap">
+                                    <span class="badge badge-success mx-1">
                                         push 
                                         <span *ngIf="activity.commits.length <= 1" class="font-weight-bold">{{activity.commits.length}} commit </span>
                                         <span *ngIf="activity.commits.length > 1" class="font-weight-bold">{{activity.commits.length}} commits </span>
                                          into <a target="_blank" [href]="activity.repo.link + '/tree/' + activity.repo.branch">{{activity.repo.name}}/{{activity.repo.branch}}</a>
-                                        
                                     </span>
                                     <span style="font-size: 0.8rem;"> - {{activity.date}}</span>
                                 </p>
