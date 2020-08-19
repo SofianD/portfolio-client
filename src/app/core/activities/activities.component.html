@@ -2,13 +2,14 @@
     <img class="w-100" src="/assets/global/octocat.png" alt="">
 </div>
 
-<div *ngIf="isLoading" class="container text-center bg-dark act-body">
-    <div class="row">
-        <div class="col-12">
-            <p>Chargement START</p>
-        </div>
-    </div>
-</div>
+<ngx-spinner
+    bdColor = "rgba(0, 0, 0, 0.8)"
+    size = "large"
+    color = "#fff"
+    type = "ball-atom"
+    [fullScreen] = "true">
+        <p style="color: white" > Ce n'est qu'une question de secondes... </p>
+</ngx-spinner>
 
 <div *ngIf="!isLoading" class="container act-body text-focus-in">
     <div class="text-center">
