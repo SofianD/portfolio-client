@@ -7,9 +7,9 @@
         </div>
 
         <div class="col-12 col-lg-6 p-0 mb-0 ml-auto d-flex link-container">
-            <a class="my-auto" [routerLink]="['']" (click)="scrollTop()">Home</a>
-            <a class="my-auto" [routerLink]="['projects']" (click)="scrollTop()">Projects</a>
-            <a class="my-auto" [routerLink]="['activities']" (click)="scrollTop()">Activities</a>
+            <a class="my-auto" [routerLink]="['']" (click)="changePage('home')">Home</a>
+            <a class="my-auto" [routerLink]="['projects']" (click)="changePage()">Projects</a>
+            <a class="my-auto" [routerLink]="['activities']" (click)="changePage()">Activities</a>
         </div>
 
     </div>
