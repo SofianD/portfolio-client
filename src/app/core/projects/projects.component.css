@@ -25,7 +25,9 @@ img {
 }
 
 .pj-container {
-    background: linear-gradient(0, #ffffff00, rgba(255, 255, 255, 0.432), rgba(255, 255, 255, 0.836));
+    /* background: linear-gradient(0, #ffffff00, rgba(255, 255, 255, 0.432), rgba(255, 255, 255, 0.836)); */
+    background:rgba(255, 255, 255, 0.432);
+
     transition: 0.5s;
 }
 
@@ -68,7 +70,7 @@ img {
 }
 
 @media screen and (max-width: 919px) {
-    .salefdp {
+    .no-padding {
         padding: 0;
     }
 }
