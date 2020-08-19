@@ -16,7 +16,7 @@ export class NavComponent implements OnInit {
     window.scroll(0, 0);
   }
 
-  changePage(page?: string) {
+  changePage() {
     this.scrollTop();
   }
 }
