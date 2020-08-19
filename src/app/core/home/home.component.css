@@ -1,3 +1,14 @@
+.pres-container {
+    width: 100%;
+    height: 40%;
+    min-height: 100px;
+    background-image: url('/assets/home/pres_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 76px;
+}
+
 .skills-overview-container {
     flex-direction: row;
     justify-content: space-around;
@@ -5,7 +16,7 @@
 
 .skill-img {
     filter: drop-shadow(0 -5px 1px #969696);
-    max-height: 200px;
+    max-height: 83px;
     max-width: 200px;
     transition: 0.2s;
 }
@@ -44,6 +55,8 @@
 .carousel__cell {
     position: absolute;
     width: 500px;
+    filter: saturate(120%) contrast(1.3);
+
     /* backface-visibility: hidden; */
 }
 
@@ -54,22 +67,11 @@
 .carousel__cell:nth-child(5) { transform: rotateY(288deg) translateZ(400px); }
 
 
-.carousel__cell:nth-child(6) { transform: rotateY(0deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 300px;}
-.carousel__cell:nth-child(7) { transform: rotateY(72deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 300px;}
-.carousel__cell:nth-child(8) { transform: rotateY(144deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 300px;}
-.carousel__cell:nth-child(9) { transform: rotateY(216deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 300px;}
-.carousel__cell:nth-child(10) { transform: rotateY(288deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 300px;}
-
-
-
-
-
-
-
-
-
-
-
+.carousel__cell:nth-child(6) { transform: rotateY(0deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 281px;}
+.carousel__cell:nth-child(7) { transform: rotateY(72deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 281px;}
+.carousel__cell:nth-child(8) { transform: rotateY(144deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 281px;}
+.carousel__cell:nth-child(9) { transform: rotateY(216deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 281px;}
+.carousel__cell:nth-child(10) { transform: rotateY(288deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 281px;}
 
 
 .halo {

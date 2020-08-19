@@ -1,0 +1,84 @@
+<div class="octocat-container">
+    <img class="w-100" src="/assets/global/octocat.png" alt="">
+</div>
+
+<ngx-spinner
+    bdColor = "rgba(0, 0, 0, 0.8)"
+    size = "large"
+    color = "#fff"
+    type = "ball-climbing-dot"
+    [fullScreen] = "true">
+        <p style="color: white" > Ce n'est qu'une question de secondes... </p>
+</ngx-spinner>
+
+<div class="text-center w-100" style="margin-top: 90px;">
+    <p><span style="font-size: 3rem;">Mon actualité Github</span></p>
+</div>
+
+<div *ngIf="!isLoading" class="container act-body text-focus-in">
+
+    <div *ngFor="let activity of ghActivities" class="row my-4">
+
+        <!-- PUSH EVENT -->
+        <div *ngIf="activity.type === 'PushEvent'" class="col-12">
+            <div class="row d-flex">
+
+                <div class="col-12 col-md-9 col-lg-7 m-auto mt-4 rounded px-0 gh-card border">
+                    <div class="row w-100 p-1 m-0 px-2 d-flex rounded-top gh-card-title border-bottom">
+                        <div class="col-11 p-0 d-flex" style="justify-content: space-between; align-items: center;">
+                            <div class="d-flex" style="flex-wrap: wrap; align-items: center;"> 
+                                <p>
+                                    <a class="font-weight-bold" target="_blank" [href]="ghLink">{{ghPseudo}}</a>
+                                    
+                                </p>
+                                <p class="d-flex flex-wrap">
+                                    <span class="badge badge-success mx-1">
+                                        push 
+                                        <span *ngIf="activity.commits.length <= 1" class="font-weight-bold">{{activity.commits.length}} commit </span>
+                                        <span *ngIf="activity.commits.length > 1" class="font-weight-bold">{{activity.commits.length}} commits </span>
+                                         into <a target="_blank" [href]="activity.repo.link + '/tree/' + activity.repo.branch">{{activity.repo.name}}/{{activity.repo.branch}}</a>
+                                    </span>
+                                    <span style="font-size: 0.8rem;"> - {{activity.date}}</span>
+                                </p>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                        <div class="col-1 p-0 d-flex">
+                            <a class="ml-auto my-auto" target="_blank" [href]="ghLink"><img class="w-100 shadow-sm" [src]="ghAvatar" alt="Github avatar" style="max-width: 40px !important; border-radius: 100%; border: solid 1px white;"></a>
+                        </div>
+                        <div class="col-12 p-0">
+                            
+                        </div>                   
+                    </div>
+
+
+                    <div class="row w-100 m-0 d-flex bg-white">
+
+                        <!-- <div class="col-12 p-1">
+                            <p>
+                                <span class="font-weight-bold">Repo: </span> <a target="_blank" [href]="activity.repo.link">{{activity.repo.name}}</a>
+                            </p>
+                            <p>
+                                <span class="font-weight-bold">Branch: </span>
+                            </p>
+                        </div> -->
+                        
+                        <div class="col-12 p-1 text-center tracking-in-expand">
+                            
+                            <ul class="list-style-type-dec px-4">
+                                <li *ngFor="let msg of activity.commits" style="font-size: 0.9rem;">
+                                    {{msg}}
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
