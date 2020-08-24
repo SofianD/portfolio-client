@@ -14,7 +14,7 @@
             <p><span style="font-size: 3rem;">Mes principaux projets</span></p>
         </div>
 
-        <div *ngFor="let project of projects" class="col-10 px-4 pj-container text-center rounded-bottom border-bottom border-right border-left mt-4 mb-auto mx-auto">
+        <div *ngFor="let project of projects" class="col-10 pj-container text-center rounded-bottom mb-auto mx-auto">
 
             <p class="pj-title">
                 {{project.name}}
@@ -54,7 +54,7 @@
                     </div>
                                         
                 </div>
-                <div class="d-flex col-12 my-2 link-btn-container mt-1 mb-4">
+                <div class="d-flex col-12 my-2 link-btn-container mt-1">
                     <a *ngIf="project.url_github.length > 0" target="_blank" class="border btn btn-light pj-btn" [href]="project.url_github">Github <img src="assets/logo/logo_github.png" alt="Lien GitHub"></a>
                     <a *ngIf="project.url_website.length > 0" target="_blank" class="border btn btn-light pj-btn" [href]="project.url_website">Website</a>
                 </div>

@@ -27,7 +27,7 @@ img {
 .pj-container {
     /* background: linear-gradient(0, #ffffff00, rgba(255, 255, 255, 0.432), rgba(255, 255, 255, 0.836)); */
     background:rgba(255, 255, 255, 0.432);
-
+    margin-top: 120px;
     transition: 0.5s;
 }
 
