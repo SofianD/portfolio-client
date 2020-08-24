@@ -1,6 +1,7 @@
 .navbar{
     font-family: 'HammerSmith', sans-serif;
-    background: linear-gradient(0, rgb(243, 243, 243), #ffffff, #ffffff, #ffffff, #ffffff);
+    /* background: linear-gradient(0, rgb(243, 243, 243), #ffffff, #ffffff, #ffffff, #ffffff); */
+    background-color: #ffffff;
     position: fixed;
     top: 0;
     width: 100%;
