@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivitiesService } from 'src/app/shared/services/activities.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 
@@ -7,7 +7,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
   templateUrl: './activities.component.html',
   styleUrls: ['./activities.component.css']
 })
-export class ActivitiesComponent implements OnInit {
+export class ActivitiesComponent implements OnInit, OnDestroy {
 
   isLoading = true;
 
@@ -15,6 +15,9 @@ export class ActivitiesComponent implements OnInit {
   ghAvatar = '';
   ghPseudo = '';
   ghLink = '';
+  topOffset = 0;
+
+  octo = document.getElementsByClassName('octocat-container') as HTMLCollectionOf<HTMLElement>;
 
   constructor(
     private activitiesService: ActivitiesService,
@@ -23,6 +26,29 @@ export class ActivitiesComponent implements OnInit {
 
   ngOnInit() {
     this.getGithubActivities();
+    this.paralaxManager(true);
+  }
+
+  ngOnDestroy() {
+    this.paralaxManager(false);
+  }
+
+  paralaxManager(toAdd: boolean) {
+    let target = this.octo;
+    function oui(v) {
+      if (target.length > 0) {
+        const newValue = document.documentElement.scrollTop;
+        const a = 100 + Math.trunc(newValue / 25);
+        target[0].style.bottom = '' + a + 'px';
+        this.topOffset = newValue;
+      }
+    }
+
+    if(toAdd) {
+      window.addEventListener('scroll', oui);
+    } else {
+      window.removeEventListener('scroll', oui);
+    }
   }
 
   async getGithubActivities() {

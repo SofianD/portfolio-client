@@ -11,13 +11,13 @@
         <p style="color: white" > Ce n'est qu'une question de secondes... </p>
 </ngx-spinner>
 
-<div class="text-center w-100" style="margin-top: 90px;">
+<div class="text-center w-100" style="margin-top: 100px;">
     <p><span style="font-size: 3rem;">Mon actualité Github</span></p>
 </div>
 
 <div *ngIf="!isLoading" class="container act-body text-focus-in">
 
-    <div *ngFor="let activity of ghActivities" class="row my-4">
+    <div *ngFor="let activity of ghActivities" class="row my-2">
 
         <!-- PUSH EVENT -->
         <div *ngIf="activity.type === 'PushEvent'" class="col-12">
@@ -54,15 +54,6 @@
 
 
                     <div class="row w-100 m-0 d-flex bg-white">
-
-                        <!-- <div class="col-12 p-1">
-                            <p>
-                                <span class="font-weight-bold">Repo: </span> <a target="_blank" [href]="activity.repo.link">{{activity.repo.name}}</a>
-                            </p>
-                            <p>
-                                <span class="font-weight-bold">Branch: </span>
-                            </p>
-                        </div> -->
                         
                         <div class="col-12 p-1 text-center tracking-in-expand">
                             

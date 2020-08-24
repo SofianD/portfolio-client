@@ -1,12 +1,11 @@
 .act-body {
-    margin-top: 20px;
     min-height: 80%;
 }
 
 .octocat-container {
     position: fixed;
     right: 5%;
-    bottom: 150px;
+    bottom: 100px;
     width: 200px;
     opacity: 0;
     /* z-index: -1; */
@@ -25,7 +24,7 @@
 }
 
 .gh-card-title {
-    background: rgba(74, 87, 86, 0.096);
+    background: rgba(74, 87, 86, 0.1);
 }
 
 @media screen and (min-width: 920px) and (min-height: 600px) {
