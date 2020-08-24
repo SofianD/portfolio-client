@@ -35,7 +35,7 @@ export class ActivitiesComponent implements OnInit, OnDestroy {
 
   paralaxManager(toAdd: boolean) {
     let target = this.octo;
-    function oui(v) {
+    function move(v) {
       if (target.length > 0) {
         const newValue = document.documentElement.scrollTop;
         const a = 100 + Math.trunc(newValue / 25);
@@ -45,9 +45,9 @@ export class ActivitiesComponent implements OnInit, OnDestroy {
     }
 
     if(toAdd) {
-      window.addEventListener('scroll', oui);
+      window.addEventListener('scroll', move);
     } else {
-      window.removeEventListener('scroll', oui);
+      window.removeEventListener('scroll', move);
     }
   }
 
