@@ -18,6 +18,7 @@ export class ActivitiesComponent implements OnInit, OnDestroy {
   topOffset = 0;
 
   octo = document.getElementsByClassName('octocat-container') as HTMLCollectionOf<HTMLElement>;
+  ghPhoto = document.getElementsByClassName('gh-photo-container') as HTMLCollectionOf<HTMLElement>;
 
   constructor(
     private activitiesService: ActivitiesService,
@@ -34,14 +35,15 @@ export class ActivitiesComponent implements OnInit, OnDestroy {
   }
 
   paralaxManager(toAdd: boolean) {
-    let target = this.octo;
+    let target = this.octo[0];
+    let scndTarget = this.ghPhoto[0];
     function move(v) {
-      if (target.length > 0) {
         const newValue = document.documentElement.scrollTop;
-        const a = 100 + Math.trunc(newValue / 25);
-        target[0].style.bottom = '' + a + 'px';
+        const a = (-800) + Math.trunc(newValue * 1.3);
+        const b = (-50) + Math.trunc(newValue / 2);
+        target.style.bottom = '' + a + 'px';
+        scndTarget.style.bottom = '' +  b + 'px';
         this.topOffset = newValue;
-      }
     }
 
     if(toAdd) {

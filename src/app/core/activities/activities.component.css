@@ -4,9 +4,18 @@
 
 .octocat-container {
     position: fixed;
-    right: 5%;
-    bottom: 100px;
+    right: 10%;
+    bottom: -800px;
     width: 200px;
+    opacity: 0;
+    /* z-index: -1; */
+}
+
+.gh-photo-container {
+    position: fixed;
+    left: 10%;
+    bottom: -50px;
+    width: 150px;
     opacity: 0;
     /* z-index: -1; */
 }
@@ -28,7 +37,8 @@
 }
 
 @media screen and (min-width: 920px) and (min-height: 600px) {
-    .octocat-container {
+    .octocat-container,
+    .gh-photo-container {
         opacity: 1;
     }
 }
