@@ -1,4 +1,4 @@
-<nav id="navbar" class="navbar tracking-in-expand">
+<nav id="navbar" class="navbar tracking-in-expand" [ngClass]="{ transparent: currentUrl === '/' && offsetTop < 1 }">
 
     <div class="container p-0">
 

@@ -46,3 +46,8 @@ a {
         margin-left: 0;
     }
 }
+
+.transparent {
+  background: transparent;
+  color: black;
+}
