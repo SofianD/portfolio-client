@@ -35,14 +35,14 @@ export class ActivitiesComponent implements OnInit, OnDestroy {
   }
 
   paralaxManager(toAdd: boolean) {
-    let target = this.octo[0];
-    let scndTarget = this.ghPhoto[0];
+    let octoTarget = this.octo[0];
+    let ghTarget = this.ghPhoto[0];
     function move(v) {
         const newValue = document.documentElement.scrollTop;
         const a = (-800) + Math.trunc(newValue * 1.3);
-        const b = (-50) + Math.trunc(newValue / 2);
-        target.style.bottom = '' + a + 'px';
-        scndTarget.style.bottom = '' +  b + 'px';
+        const b = (-200) + Math.trunc(newValue / 2);
+        octoTarget.style.bottom = '' + a + 'px';
+        ghTarget.style.bottom = '' +  b + 'px';
         this.topOffset = newValue;
     }
 
