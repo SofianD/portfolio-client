@@ -6,17 +6,18 @@
     <img class="w-100" src="/assets/global/gh_photo.png" alt="">
 </div>
 
-<ngx-spinner
-    bdColor = "rgba(0, 0, 0, 0.8)"
-    size = "large"
-    color = "#fff"
-    type = "ball-climbing-dot"
-    [fullScreen] = "true">
-        <p style="color: white" > Ce n'est qu'une question de secondes... </p>
-</ngx-spinner>
-
 <div class="container head-container">
     <img class="head-img" src="/assets/activities/o.png" alt="">
+</div>
+
+<div *ngIf="isLoading" class="container" style="height: 600px;">
+    <ngx-spinner
+    [fullScreen] = "false"
+    bdColor = "rgba(0, 0, 0, 0)"
+    size = "large"
+    color = "#00000090"
+    type = "ball-clip-rotate-multiple">
+    </ngx-spinner>
 </div>
 
 <div *ngIf="!isLoading" class="container act-body text-focus-in">
