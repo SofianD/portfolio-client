@@ -13,8 +13,18 @@
     max-width: 1110px;
 }
 
+.transparent {
+    background: transparent;
+    transition: 0.3s ease-in;
+}
+.transparent {
+    color: white;
+    transition: 0.6s ease-out;
+}
+
 a {
     transition: 0.2s;
+    filter: drop-shadow(0px -2px 10px #ffffff80);
 }
 
 .link-container a:hover {
@@ -45,9 +55,4 @@ a {
     .link-container a {
         margin-left: 0;
     }
-}
-
-.transparent {
-  background: transparent;
-  color: black;
 }
