@@ -7,10 +7,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-shadow: 0 0 5px #ffffff !important;
-    /* z-index: 5; */
 }
 
-#home-navbar {
+/* #home-navbar {
     position: absolute;
     width: 100%;
     top: 0;
@@ -30,7 +29,7 @@
 
 .link-container a {
     margin-left: 15px;
-}
+} */
 
 .skills-overview-container {
     flex-direction: row;
