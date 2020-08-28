@@ -2,12 +2,12 @@
 
 @font-face{
     font-family: "Dosis";
-    src: url("/assets/police/Dosis-VariableFont_wght.ttf");
+    src: url("./assets/police/Dosis-VariableFont_wght.ttf");
 }
 
 @font-face{
     font-family: "HammerSmith";
-    src: url("/assets/police/HammersmithOne-Regular.ttf");
+    src: url("./assets/police/HammersmithOne-Regular.ttf");
 }
 
 html, body { height: 100%; }
@@ -60,7 +60,7 @@ p {
 
 @media screen and (min-width: 800px) {
     #bg-drawing {
-        background-image: url('/assets/global/decor.png');
+        background-image: url('./assets/global/decor.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
