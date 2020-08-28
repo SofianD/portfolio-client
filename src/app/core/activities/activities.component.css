@@ -6,12 +6,12 @@
 
 .head-img {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
 }
 
 
 .act-body {
-    min-height: 80%;
+    margin-top: 150px;
 }
 
 .octocat-container {
