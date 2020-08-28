@@ -1,6 +1,5 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, HostListener } from '@angular/core';
 import db from 'src/assets/db_projects/links-of-skills-img.json';
-import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +7,10 @@ import { NgxSpinnerService } from 'ngx-spinner';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
+
+  @HostListener('window:resize', ['$event']) onResize(event) {
+    this.checkWidth();
+  }
 
   linksOfSkillsImg: string[];
 
@@ -24,26 +27,46 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     4500
   );
-  constructor(
-    private spinner: NgxSpinnerService
-  ) {
+
+  carouselIsVisible: boolean;
+
+
+  constructor() {
     this.linksOfSkillsImg = db.links;
+    this.checkWidth();
   }
 
   ngOnInit() {
-    // this.spinner.show();
-    // setTimeout(() => {
-    //   this.spinner.hide();
-    // },
-    // 700);
+
   }
 
   ngAfterViewInit() {
     // tslint:disable-next-line: no-unused-expression
-    this.rotateCarousel;
+    if (this.carouselIsVisible) {
+      this.rotateCarousel;
+    }
+  }
+
+  checkWidth () {
+    if(window.innerWidth > 991) {
+      if (!this.carouselIsVisible) {
+        console.log('oui')
+        this.rotateCarousel;
+      }
+      this.carouselIsVisible = true;
+    } else {
+      if (this.carouselIsVisible) {
+        this.destroyCarousel();
+      }
+      this.carouselIsVisible = false;
+    }
+  }
+
+  destroyCarousel() {
+    clearInterval(this.rotateCarousel);
   }
 
   ngOnDestroy() {
-    clearInterval(this.rotateCarousel);
+    this.destroyCarousel();
   }
 }
