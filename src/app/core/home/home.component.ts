@@ -31,11 +31,11 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.spinner.show();
-    setTimeout(() => {
-      this.spinner.hide();
-    },
-    700);
+    // this.spinner.show();
+    // setTimeout(() => {
+    //   this.spinner.hide();
+    // },
+    // 700);
   }
 
   ngAfterViewInit() {

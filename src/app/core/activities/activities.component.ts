@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivitiesService } from 'src/app/shared/services/activities.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 
@@ -7,7 +7,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
   templateUrl: './activities.component.html',
   styleUrls: ['./activities.component.css']
 })
-export class ActivitiesComponent implements OnInit {
+export class ActivitiesComponent implements OnInit, OnDestroy {
 
   isLoading = true;
 
@@ -15,6 +15,10 @@ export class ActivitiesComponent implements OnInit {
   ghAvatar = '';
   ghPseudo = '';
   ghLink = '';
+  topOffset = 0;
+
+  octo = document.getElementsByClassName('octocat-container') as HTMLCollectionOf<HTMLElement>;
+  ghPhoto = document.getElementsByClassName('gh-photo-container') as HTMLCollectionOf<HTMLElement>;
 
   constructor(
     private activitiesService: ActivitiesService,
@@ -23,6 +27,30 @@ export class ActivitiesComponent implements OnInit {
 
   ngOnInit() {
     this.getGithubActivities();
+    this.paralaxManager(true);
+  }
+
+  ngOnDestroy() {
+    this.paralaxManager(false);
+  }
+
+  paralaxManager(toAdd: boolean) {
+    let octoTarget = this.octo[0];
+    let ghTarget = this.ghPhoto[0];
+    function move(v) {
+        const newValue = document.documentElement.scrollTop;
+        const a = (-800) + Math.trunc(newValue * 1.3);
+        const b = (-200) + Math.trunc(newValue / 2);
+        octoTarget.style.bottom = '' + a + 'px';
+        ghTarget.style.bottom = '' +  b + 'px';
+        this.topOffset = newValue;
+    }
+
+    if(toAdd) {
+      window.addEventListener('scroll', move);
+    } else {
+      window.removeEventListener('scroll', move);
+    }
   }
 
   async getGithubActivities() {

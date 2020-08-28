@@ -19,11 +19,11 @@ export class ProjectsComponent implements OnInit {
     this.projects = db.projects;
   }
   ngOnInit() {
-    this.spinner.show();
-    setTimeout(() => {
-      this.spinner.hide();
-    },
-    400);
+    // this.spinner.show();
+    // setTimeout(() => {
+    //   this.spinner.hide();
+    // },
+    // 400);
   }
 
   openImgCanvas(images: any[]) {

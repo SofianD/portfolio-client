@@ -1,13 +1,36 @@
 .pres-container {
     width: 100%;
-    height: 40%;
+    height: 100%;
     min-height: 100px;
     background-image: url('/assets/home/pres_bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 76px;
+    box-shadow: 0px 3px 20px #000000;
+    text-shadow: 0 0 5px #ffffff !important;
 }
+
+/* #home-navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    color: white;
+}
+
+.link-container a:hover {
+    transform: scale(1.2);
+    color: inherit;
+    transition: 0.2s;
+}
+
+.link-container {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.link-container a {
+    margin-left: 15px;
+} */
 
 .skills-overview-container {
     flex-direction: row;
@@ -67,12 +90,26 @@
 .carousel__cell:nth-child(5) { transform: rotateY(288deg) translateZ(400px); }
 
 
-.carousel__cell:nth-child(6) { transform: rotateY(0deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 281px;}
-.carousel__cell:nth-child(7) { transform: rotateY(72deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 281px;}
-.carousel__cell:nth-child(8) { transform: rotateY(144deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 281px;}
-.carousel__cell:nth-child(9) { transform: rotateY(216deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 281px;}
-.carousel__cell:nth-child(10) { transform: rotateY(288deg) translateZ(399px); background-color: rgba(240, 244, 242, 0.6); min-height: 281px;}
+.carousel__cell:nth-child(6) { transform: rotateY(0deg) translateZ(399.9px); background-color: rgba(240, 244, 242, 0.7); min-height: 281px;}
+.carousel__cell:nth-child(7) { transform: rotateY(72deg) translateZ(399.9px); background-color: rgba(240, 244, 242, 0.7); min-height: 281px;}
+.carousel__cell:nth-child(8) { transform: rotateY(144deg) translateZ(399.9px); background-color: rgba(240, 244, 242, 0.7); min-height: 281px;}
+.carousel__cell:nth-child(9) { transform: rotateY(216deg) translateZ(399.9px); background-color: rgba(240, 244, 242, 0.7); min-height: 281px;}
+.carousel__cell:nth-child(10) { transform: rotateY(288deg) translateZ(399.9px); background-color: rgba(240, 244, 242, 0.7); min-height: 281px;}
 
+@media screen and (max-width: 991px) {
+    .logo-container {
+        text-align: center;
+    }
+
+    .link-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .link-container a {
+        margin-left: 0;
+    }
+}
 
 .halo {
     -webkit-animation: halo 4s linear infinite alternate;

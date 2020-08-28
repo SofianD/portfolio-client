@@ -1,13 +1,33 @@
+.head-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.head-img {
+    width: 100%;
+    max-width: 500px;
+}
+
+
 .act-body {
-    margin-top: 20px;
-    min-height: 80%;
+    margin-top: 150px;
 }
 
 .octocat-container {
     position: fixed;
-    right: 5%;
-    bottom: 150px;
+    right: 10%;
+    bottom: -800px;
     width: 200px;
+    opacity: 0;
+    /* z-index: -1; */
+}
+
+.gh-photo-container {
+    position: fixed;
+    left: 10%;
+    bottom: -200px;
+    width: 150px;
     opacity: 0;
     /* z-index: -1; */
 }
@@ -25,11 +45,12 @@
 }
 
 .gh-card-title {
-    background: rgba(74, 87, 86, 0.096);
+    background: rgba(74, 87, 86, 0.1);
 }
 
 @media screen and (min-width: 920px) and (min-height: 600px) {
-    .octocat-container {
+    .octocat-container,
+    .gh-photo-container {
         opacity: 1;
     }
 }

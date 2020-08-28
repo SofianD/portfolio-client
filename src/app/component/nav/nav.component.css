@@ -1,19 +1,27 @@
 .navbar{
     font-family: 'HammerSmith', sans-serif;
-    background: linear-gradient(0, rgb(243, 243, 243), #ffffff, #ffffff, #ffffff, #ffffff);
+    /* background: linear-gradient(0, rgb(243, 243, 243), #ffffff, #ffffff, #ffffff, #ffffff); */
+    background-color: #ffffff;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
-    min-height: 76px;
+    /* min-height: 76px; */
 }
 
 .container{
     max-width: 1110px;
 }
 
+.transparent {
+    background: transparent;
+    color: white;
+    transition: 0.6s ease-in-out;
+}
+
 a {
     transition: 0.2s;
+    filter: drop-shadow(0px -2px 10px #ffffff80);
 }
 
 .link-container a:hover {

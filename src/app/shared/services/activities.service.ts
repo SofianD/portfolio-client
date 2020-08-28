@@ -36,34 +36,34 @@ export class ActivitiesService {
           commits: res[i].payload.commits.map(x => x.message),
           date: res[i].created_at.slice(0, 10).split('-').reverse().join('/')
         });
+      } 
+      // else if (res[i].type === 'PullRequestEvent') {
+      //   arr.push ({
+      //     id: res[i].id,
+      //     type: res[i].type,
+      //     repo: {
+      //       name: res[i].repo.name.split('/').pop(),
+      //       link: 'http://github.com/' + res[i].repo.name
+      //     },
+      //     opened: res[i].payload.action === 'opened' ? true : false,
+      //     date: res[i].created_at
+      //   });
 
-      } else if (res[i].type === 'PullRequestEvent') {
-        arr.push ({
-          id: res[i].id,
-          type: res[i].type,
-          repo: {
-            name: res[i].repo.name.split('/').pop(),
-            link: 'http://github.com/' + res[i].repo.name
-          },
-          opened: res[i].payload.action === 'opened' ? true : false,
-          date: res[i].created_at
-        });
-
-      } else if (res[i].type === 'CreateEvent' || res[i].type === 'DeleteEvent') {
-        arr.push ({
-          id: res[i].id,
-          type: res[i].type,
-          repo: {
-            name: res[i].repo.name.split('/').pop(),
-            link: 'http://github.com/' + res[i].repo.name
-          },
-          payload: {
-            name: res[i].payload.ref,
-            type: res[i].payload.ref_type
-          },
-          date: res[i].created_at
-        });
-      }
+      // } else if (res[i].type === 'CreateEvent' || res[i].type === 'DeleteEvent') {
+      //   arr.push ({
+      //     id: res[i].id,
+      //     type: res[i].type,
+      //     repo: {
+      //       name: res[i].repo.name.split('/').pop(),
+      //       link: 'http://github.com/' + res[i].repo.name
+      //     },
+      //     payload: {
+      //       name: res[i].payload.ref,
+      //       type: res[i].payload.ref_type
+      //     },
+      //     date: res[i].created_at
+      //   });
+      // }
     }
     return {
       data: arr,

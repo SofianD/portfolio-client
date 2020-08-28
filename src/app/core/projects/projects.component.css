@@ -1,12 +1,25 @@
-img {
-    cursor: pointer;
+.head-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
 }
+
+.head-img {
+    width: 100%;
+    max-width: 700px;
+    cursor: initial;
+}
+
 .pj-title {
     font-size: 2rem;
     padding-bottom: 10px;
     transition: 0.5s;
-    -webkit-text-fill-color: rgb(179, 192, 3);
-    -webkit-text-stroke-width: 1px;
+    
+}
+
+.txt-stroke {
+    -webkit-text-fill-color: rgba(64, 92, 134, 0.986);
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
 }
 
@@ -15,7 +28,8 @@ img {
     font-size: 1rem;
 }
 
-.img-pres{
+.img-pres {
+    cursor: zoom-in;
     transition: 0.5s;
 }
 
@@ -26,8 +40,8 @@ img {
 
 .pj-container {
     /* background: linear-gradient(0, #ffffff00, rgba(255, 255, 255, 0.432), rgba(255, 255, 255, 0.836)); */
-    background:rgba(255, 255, 255, 0.432);
-
+    background:rgba(255, 255, 255, 0.9);
+    margin-top: 120px;
     transition: 0.5s;
 }
 

@@ -2,29 +2,34 @@
     <img class="w-100" src="/assets/global/octocat.png" alt="">
 </div>
 
-<ngx-spinner
-    bdColor = "rgba(0, 0, 0, 0.8)"
-    size = "large"
-    color = "#fff"
-    type = "ball-climbing-dot"
-    [fullScreen] = "true">
-        <p style="color: white" > Ce n'est qu'une question de secondes... </p>
-</ngx-spinner>
+<div class="gh-photo-container">
+    <img class="w-100" src="/assets/global/gh_photo.png" alt="">
+</div>
 
-<div class="text-center w-100" style="margin-top: 90px;">
-    <p><span style="font-size: 3rem;">Mon actualité Github</span></p>
+<div class="container head-container">
+    <img class="head-img" src="/assets/activities/o.png" alt="">
+</div>
+
+<div *ngIf="isLoading" class="container" style="height: 600px;">
+    <ngx-spinner
+    [fullScreen] = "false"
+    bdColor = "rgba(0, 0, 0, 0)"
+    size = "large"
+    color = "#00000090"
+    type = "ball-clip-rotate-multiple">
+    </ngx-spinner>
 </div>
 
 <div *ngIf="!isLoading" class="container act-body text-focus-in">
 
-    <div *ngFor="let activity of ghActivities" class="row my-4">
+    <div *ngFor="let activity of ghActivities" class="row" style="margin: 75px 0;">
 
         <!-- PUSH EVENT -->
         <div *ngIf="activity.type === 'PushEvent'" class="col-12">
             <div class="row d-flex">
 
                 <div class="col-12 col-md-9 col-lg-7 m-auto mt-4 rounded px-0 gh-card border">
-                    <div class="row w-100 p-1 m-0 px-2 d-flex rounded-top gh-card-title border-bottom">
+                    <div class="row p-1 m-0 px-2 d-flex rounded-top gh-card-title border-bottom">
                         <div class="col-11 p-0 d-flex" style="justify-content: space-between; align-items: center;">
                             <div class="d-flex" style="flex-wrap: wrap; align-items: center;"> 
                                 <p>
@@ -54,15 +59,6 @@
 
 
                     <div class="row w-100 m-0 d-flex bg-white">
-
-                        <!-- <div class="col-12 p-1">
-                            <p>
-                                <span class="font-weight-bold">Repo: </span> <a target="_blank" [href]="activity.repo.link">{{activity.repo.name}}</a>
-                            </p>
-                            <p>
-                                <span class="font-weight-bold">Branch: </span>
-                            </p>
-                        </div> -->
                         
                         <div class="col-12 p-1 text-center tracking-in-expand">
                             

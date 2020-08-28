@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
+  offsetTop = document.documentElement.scrollTop;
+  nav = document.getElementsByClassName('navbar') as HTMLCollectionOf<HTMLElement>;
+  currentUrl = '';
 
-  constructor() { }
+  @HostListener('window:scroll', ['$event']) onScroll($event: Event): void {
+    this.offsetTop = document.documentElement.scrollTop;
+  }
 
-  ngOnInit() {
+  constructor(
+    private router: Router,
+  ) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.currentUrl = event.url;
+      }
+    });
   }
 
   scrollTop() {
