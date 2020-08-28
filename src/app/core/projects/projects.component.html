@@ -7,16 +7,17 @@
         <p style="color: white" > Ce n'est qu'une question de secondes... </p>
 </ngx-spinner> -->
 
-<div style="width: 100%; min-height: 80%; padding-top: 76px;" class="d-flex mt-2 text-focus-in">
+<div class="container head-container">
+    <img class="head-img" src="/assets/projects/projet.png" alt="">
+</div>
+
+<div style="width: 100%; min-height: 80%;" class="d-flex mt-2 text-focus-in">
 
     <div class="row m-auto d-flex flex-column">
-        <div class="text-center">
-            <p><span style="font-size: 3rem;">Mes principaux projets</span></p>
-        </div>
 
         <div *ngFor="let project of projects" class="col-10 pj-container text-center rounded mb-auto mx-auto">
 
-            <p class="pj-title">
+            <p class="pj-title txt-stroke">
                 {{project.name}}
             </p>
             
@@ -33,7 +34,7 @@
                         <br>
                         <div class="my-auto">
                             <p>
-                                <span class="pj-subtitle">Technos</span><br>
+                                <span class="pj-subtitle txt-stroke">Technos</span><br>
                                 <span *ngFor="let skill of project.technos" class="badge badge-pill badge-success mx-1">{{skill}}</span>
                             </p>
 
@@ -41,7 +42,7 @@
                         <br>
                         <div *ngIf="project.frameworks.length > 0" class="my-auto">
                             <p>
-                                <span class="pj-subtitle">Frameworks</span><br>
+                                <span class="pj-subtitle txt-stroke">Frameworks</span><br>
                                 <span *ngFor="let fm of project.frameworks" class="badge badge-pill badge-warning mx-1">{{fm}}</span>
                             </p>
                         </div>
