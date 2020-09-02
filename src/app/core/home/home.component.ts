@@ -49,15 +49,14 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   checkWidth () {
     if(window.innerWidth > 991) {
-      if (!this.carouselIsVisible) {
-        console.log('oui')
-        this.rotateCarousel;
-      }
+      // if (!this.carouselIsVisible) {
+      //   this.rotateCarousel;
+      // }
       this.carouselIsVisible = true;
     } else {
-      if (this.carouselIsVisible) {
-        this.destroyCarousel();
-      }
+      // if (this.carouselIsVisible) {
+      //   this.destroyCarousel();
+      // }
       this.carouselIsVisible = false;
     }
   }
