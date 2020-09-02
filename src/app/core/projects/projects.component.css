@@ -14,7 +14,8 @@
     font-size: 2rem;
     padding-bottom: 10px;
     transition: 0.5s;
-    
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
 }
 
 .txt-stroke {
@@ -31,11 +32,15 @@
 .img-pres {
     cursor: zoom-in;
     transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
 }
 
 .img-pres:hover {
     /* filter: blur(2px); */
     transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
 }
 
 .pj-container {
@@ -46,12 +51,14 @@
     -webkit-transform: translateX(0);
     transition: 0.5s ease-in-out;
     -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
 }
 
 .not-visible {
     opacity: 0;
     transform: translateX(-200px);
     -webkit-transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
 }
 
 .pj-btn {
@@ -61,7 +68,10 @@
 .pj-btn:hover {
     filter: invert(100%);
     transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
 }
+
 .link-btn-container {
     justify-content: space-between;
 }
@@ -103,6 +113,8 @@
     .pj-container {
         filter: saturate(90%);
         transition: 1s;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
         max-width: 1110px;
     }
 
@@ -113,11 +125,15 @@
     .blur {
         filter: blur(2px);
         transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
     }
 
     .pj-container:hover,
     .pj-container:focus {
-        transition: 1s;
         filter: saturate(150%);
+        transition: 1s;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
     }    
 }
