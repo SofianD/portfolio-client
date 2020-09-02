@@ -37,17 +37,23 @@
 
 .skill-img {
     filter: drop-shadow(0 -5px 1px #969696);
+    -webkit-filter: drop-shadow(0 -5px 1px #969696);
     max-height: 83px;
     max-width: 200px;
     transition: 0.2s;
     -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
 }
 
 .img-container:hover .skill-img {
     filter: drop-shadow(0 -10px 5px #969696);
+    -webkit-filter: drop-shadow(0 -10px 5px #969696);
     transform: scale(1.5) translateY(5px);
+    -webkit-transform: scale(1.5) translateY(5px);
+    -moz-transform: scale(1.5) translateY(5px);
     transition: 0.3s;
     -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
 }
 
 #body-carousel {
@@ -59,6 +65,7 @@
     margin-bottom: 50px;
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
 }
 
 .scene {
@@ -68,6 +75,7 @@
     position: relative;
     perspective: 2000px;
     -webkit-perspective: 2000px;
+    -moz-perspective: 2000px;
 }
 
 .carousel {
@@ -78,6 +86,7 @@
     -webkit-transform-style: preserve-3d;
     transition: 2s;
     -webkit-transition: 2s;
+    -moz-transition: 2s;
 }
 
 .carousel__cell {
@@ -88,18 +97,58 @@
     /* backface-visibility: hidden; */
 }
 
-.carousel__cell:nth-child(1) { transform: rotateY(0deg) translateZ(400px); }
-.carousel__cell:nth-child(2) { transform: rotateY(72deg) translateZ(400px); }
-.carousel__cell:nth-child(3) { transform: rotateY(144deg) translateZ(400px); }
-.carousel__cell:nth-child(4) { transform: rotateY(216deg) translateZ(400px); }
-.carousel__cell:nth-child(5) { transform: rotateY(288deg) translateZ(400px); }
+.carousel__cell:nth-child(1) {
+    transform: rotateY(0deg) translateZ(400px);
+    -webkit-transform: rotateY(0deg) translateZ(400px);
+    -moz-transform: rotateY(0deg) translateZ(400px);
+}
+.carousel__cell:nth-child(2) {
+    transform: rotateY(72deg) translateZ(400px); 
+    -webkit-transform: rotateY(72deg) translateZ(400px);
+    -moz-transform: rotateY(72deg) translateZ(400px);
+}
+.carousel__cell:nth-child(3) {
+    transform: rotateY(144deg) translateZ(400px); 
+    -webkit-transform: rotateY(144deg) translateZ(400px);
+    -moz-transform: rotateY(144deg) translateZ(400px);
+}
+.carousel__cell:nth-child(4) {
+    transform: rotateY(216deg) translateZ(400px); 
+    -webkit-transform: rotateY(216deg) translateZ(400px);
+    -moz-transform: rotateY(216deg) translateZ(400px);
+}
+.carousel__cell:nth-child(5) {
+    transform: rotateY(288deg) translateZ(400px); 
+    -webkit-transform: rotateY(288deg) translateZ(400px);
+    -moz-transform: rotateY(288deg) translateZ(400px);
+}
 
 
-.carousel__cell:nth-child(6) { transform: rotateY(0deg) translateZ(399.9px); background-color: rgba(240, 244, 242, 0.7); min-height: 281px;}
-.carousel__cell:nth-child(7) { transform: rotateY(72deg) translateZ(399.9px); background-color: rgba(240, 244, 242, 0.7); min-height: 281px;}
-.carousel__cell:nth-child(8) { transform: rotateY(144deg) translateZ(399.9px); background-color: rgba(240, 244, 242, 0.7); min-height: 281px;}
-.carousel__cell:nth-child(9) { transform: rotateY(216deg) translateZ(399.9px); background-color: rgba(240, 244, 242, 0.7); min-height: 281px;}
-.carousel__cell:nth-child(10) { transform: rotateY(288deg) translateZ(399.9px); background-color: rgba(240, 244, 242, 0.7); min-height: 281px;}
+.carousel__cell:nth-child(6) {
+    transform: rotateY(0deg) translateZ(399.9px);
+    background-color: rgba(240, 244, 242, 0.7);
+    min-height: 281px;
+}
+.carousel__cell:nth-child(7) {
+    transform: rotateY(72deg) translateZ(399.9px);
+    background-color: rgba(240, 244, 242, 0.7);
+    min-height: 281px;
+}
+.carousel__cell:nth-child(8) {
+    transform: rotateY(144deg) translateZ(399.9px);
+    background-color: rgba(240, 244, 242, 0.7);
+    min-height: 281px;
+}
+.carousel__cell:nth-child(9) {
+    transform: rotateY(216deg) translateZ(399.9px);
+    background-color: rgba(240, 244, 242, 0.7);
+    min-height: 281px;
+}
+.carousel__cell:nth-child(10) {
+    transform: rotateY(288deg) translateZ(399.9px);
+    background-color: rgba(240, 244, 242, 0.7);
+    min-height: 281px;
+}
 
 @media screen and (max-width: 991px) {
     .logo-container {
