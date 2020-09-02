@@ -19,6 +19,7 @@ body {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    -webkit-overflow-scrolling: touch;
     /* background-color: rgb(240, 244, 242); */
     /* max-width: 2080px;
     margin: 0 auto; */
