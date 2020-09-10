@@ -115,10 +115,10 @@
 
 @media screen and (min-width: 920px) {
     .pj-container {
-        filter: saturate(90%);
+        /* filter: saturate(90%);
         transition: 1s;
         -webkit-transition: 1s;
-        -moz-transition: 1s;
+        -moz-transition: 1s; */
         max-width: 1110px;
     }
 
