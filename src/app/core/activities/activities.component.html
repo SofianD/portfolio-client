@@ -1,13 +1,13 @@
 <div class="octocat-container">
-    <img class="w-100" src="/assets/global/octocat.png" alt="">
+    <img class="w-100" src="./assets/global/octocat.png" alt="">
 </div>
 
 <div class="gh-photo-container">
-    <img class="w-100" src="/assets/global/gh_photo.png" alt="">
+    <img class="w-100" src="./assets/global/gh_photo.png" alt="">
 </div>
 
-<div class="container head-container">
-    <img class="head-img" src="/assets/activities/o.png" alt="">
+<div *ngIf="!isLoading" class="container head-container">
+    <img class="head-img" src="./assets/activities/o.png" alt="">
 </div>
 
 <div *ngIf="isLoading" class="container" style="height: 600px;">
@@ -18,6 +18,10 @@
     color = "#00000090"
     type = "ball-clip-rotate-multiple">
     </ngx-spinner>
+</div>
+
+<div *ngIf="isLoading" class="container" style="height: 100vh;">
+
 </div>
 
 <div *ngIf="!isLoading" class="container act-body text-focus-in">

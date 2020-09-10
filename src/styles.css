@@ -2,12 +2,12 @@
 
 @font-face{
     font-family: "Dosis";
-    src: url("/assets/police/Dosis-VariableFont_wght.ttf");
+    src: url("./assets/police/Dosis-VariableFont_wght.ttf");
 }
 
 @font-face{
     font-family: "HammerSmith";
-    src: url("/assets/police/HammersmithOne-Regular.ttf");
+    src: url("./assets/police/HammersmithOne-Regular.ttf");
 }
 
 html, body { height: 100%; }
@@ -19,6 +19,7 @@ body {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    -webkit-overflow-scrolling: touch;
     /* background-color: rgb(240, 244, 242); */
     /* max-width: 2080px;
     margin: 0 auto; */
@@ -31,11 +32,12 @@ body {
     left: 0;
     right: 0;
     z-index: -1;
+    filter: blur(8px);
 }
 
 a, a:hover {
     text-decoration: none;
-    color: inherit
+    color: inherit;
 }
 
 
@@ -60,7 +62,7 @@ p {
 
 @media screen and (min-width: 800px) {
     #bg-drawing {
-        background-image: url('/assets/global/decor.png');
+        background-image: url('./assets/global/decor.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
