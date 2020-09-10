@@ -6,8 +6,16 @@
     <img class="w-100" src="./assets/global/gh_photo.png" alt="">
 </div>
 
-<div *ngIf="!isLoading" class="container head-container">
+<div class="container head-container">
     <img class="head-img" src="./assets/activities/o.png" alt="">
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-6">
+            <button type="button" class="btn btn-primary" (click)="changeMode('activity')">Activities</button>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-primary" (click)="changeMode('projects')">Projects</button>
+        </div>
+    </div>
 </div>
 
 <div *ngIf="isLoading" class="container" style="height: 600px;">
@@ -20,11 +28,25 @@
     </ngx-spinner>
 </div>
 
-<div *ngIf="isLoading" class="container" style="height: 100vh;">
-
+<!-- <div *ngIf="ghActivities.length === 0 && mode === 'activity'" class="container" style="height: 100vh;"></div>
+<div *ngIf="ghProjects.length === 0 && mode === 'projects'" class="container" style="height: 100vh;"></div> -->
+<div *ngIf="mode === 'projects' && ghProjects.length > 0" class="container text-focus-in" style="margin-top: 100px; min-height: 60%;">
+    <div class="row">
+        <div *ngFor="let project of ghProjects" class="col-12 col-md-4 p-1  tracking-in-expand">
+            <div class="border rounded p-1 bg-white">
+                <div class="d-flex mb-1" style="flex-direction: row; align-items: center; color: blue; font-weight: bold;">
+                    <img src="assets/activities/folder-icon.png" alt="folder icon" class="mr-1">
+                    <a [href]="project.link" target="_blank">{{project.name}}</a>
+                </div>
+                
+                <p style="font-size: 0.9rem;">"{{project.description}}"</p>
+                <!-- <p style="font-size: 0.9rem;">{{project.techno}}</p> -->
+            </div>
+        </div>
+    </div>
 </div>
 
-<div *ngIf="!isLoading" class="container act-body text-focus-in">
+<div *ngIf="!isLoading && mode === 'activity'" class="container act-body text-focus-in">
 
     <div *ngFor="let activity of ghActivities" class="row" style="margin: 75px 0;">
 

@@ -9,7 +9,10 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class ActivitiesComponent implements OnInit, OnDestroy {
 
+  mode: 'activity' | 'projects' = 'activity'
   isLoading = true;
+
+  ghProjects: any[] = [];
 
   ghActivities: any[] = [];
   ghAvatar = '';
@@ -27,11 +30,16 @@ export class ActivitiesComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.getGithubActivities();
-    this.paralaxManager(true);
+    this.getGhProjects();
+    // this.paralaxManager(true);
   }
 
   ngOnDestroy() {
     this.paralaxManager(false);
+  }
+
+  changeMode(mode) {
+    this.mode = mode;
   }
 
   paralaxManager(toAdd: boolean) {
@@ -69,4 +77,7 @@ export class ActivitiesComponent implements OnInit, OnDestroy {
     this.spinner.hide();
   }
 
+  async getGhProjects() {
+    this.ghProjects = await this.activitiesService.getGhProjects();
+  }
 }
