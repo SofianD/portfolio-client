@@ -20,6 +20,10 @@
     </ngx-spinner>
 </div>
 
+<div *ngIf="isLoading" class="container" style="height: 100vh;">
+
+</div>
+
 <div *ngIf="!isLoading" class="container act-body text-focus-in">
 
     <div *ngFor="let activity of ghActivities" class="row" style="margin: 75px 0;">
