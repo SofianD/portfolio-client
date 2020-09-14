@@ -9,7 +9,10 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class ActivitiesComponent implements OnInit, OnDestroy {
 
+  mode: 'activity' | 'projects' = 'projects'
   isLoading = true;
+
+  ghProjects: any[] = [];
 
   ghActivities: any[] = [];
   ghAvatar = '';
@@ -26,12 +29,16 @@ export class ActivitiesComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.getGithubActivities();
-    this.paralaxManager(true);
+    this.getData();
+    // this.paralaxManager(true);
   }
 
   ngOnDestroy() {
-    this.paralaxManager(false);
+    // this.paralaxManager(false);
+  }
+
+  changeMode(mode) {
+    this.mode = mode;
   }
 
   paralaxManager(toAdd: boolean) {
@@ -53,9 +60,16 @@ export class ActivitiesComponent implements OnInit, OnDestroy {
     }
   }
 
-  async getGithubActivities() {
+  async getData() {
     this.isLoading = true;
     this.spinner.show();
+    await this.getGithubActivities();
+    await this.getGhProjects();
+    this.isLoading = false;
+    this.spinner.hide();
+  }
+
+  async getGithubActivities() {
     try {
       const response = await this.activitiesService.getGhFeeds();
       this.ghActivities = response.data;
@@ -63,10 +77,15 @@ export class ActivitiesComponent implements OnInit, OnDestroy {
       this.ghPseudo = response.pseudo;
       this.ghLink = 'https://github.com/' + this.ghPseudo;
     } catch (error) {
-      console.log('Cannot load data from the github API');
+      console.log('Cannot load events from the github API');
     }
-    this.isLoading = false;
-    this.spinner.hide();
   }
 
+  async getGhProjects() {
+    try {
+      this.ghProjects = await this.activitiesService.getGhProjects();
+    } catch (error) {
+      console.log('Cannot load repositories from the github API');
+    }
+  }
 }

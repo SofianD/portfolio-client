@@ -15,7 +15,7 @@ export class ActivitiesService {
     try {
       res = await this.http.get('https://api.github.com/users/SofianD/events').toPromise();
     } catch (error) {
-      console.log('Can\'t get github data.');
+      console.log('Can\'t get github events.');
       return 'error';
     }
 
@@ -70,5 +70,26 @@ export class ActivitiesService {
       avatar: res[0].actor.avatar_url,
       pseudo: res[0].actor.login
     };
+  }
+
+  async getGhProjects() {
+    let res;
+    try {
+      res = await this.http.get('https://api.github.com/users/SofianD/repos').toPromise();
+    } catch (error) {
+      console.log('Can\'t get github projects.');
+      return 'error';
+    }
+
+    res = res.map(project => {
+      return {
+        name: project.name,
+        description: project.description !== null ? project.description : 'No desc.',
+        link: project.html_url,
+        techno: project.language !== null ? project.language : 'No main language.'
+      };
+    })
+
+    return res;
   }
 }
