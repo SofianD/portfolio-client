@@ -52,9 +52,9 @@ export class ProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.items = document.querySelectorAll('.pj-container');
 
-    // if (NodeList.prototype.forEach === undefined) {
-    //   NodeList.prototype.forEach = Array.prototype.forEach as any;
-    // }
+    if (NodeList.prototype.forEach === undefined) {
+      NodeList.prototype.forEach = Array.prototype.forEach as any;
+    }
 
     this.items.forEach(element => {
       element.classList.add('not-visble');
