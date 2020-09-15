@@ -10,6 +10,11 @@
     src: url("./assets/police/HammersmithOne-Regular.ttf");
 }
 
+@font-face{
+    font-family: "KronaOne";
+    src: url("./assets/police/KronaOne-Regular.ttf");
+}
+
 html, body { height: 100%; }
 body { 
     margin: 0;
