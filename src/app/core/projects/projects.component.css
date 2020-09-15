@@ -87,19 +87,19 @@
 }
 
 .not-visible:nth-of-type(2n) {
-    transform: translateZ(0) translateX(-200px) scaleX(0.5);
-    -webkit-transform: translateZ(0) translateX(-200px) scaleX(0.5);
-    -moz-transform: translateZ(0) translateX(-200px) scaleX(0.5);
-    -ms-transform: translateZ(0) translateX(-200px) scaleX(0.5);
-    -o-transform: translateZ(0) translateX(-200px) scaleX(0.5);
+    transform: translateZ(0) translateX(-100px) scaleX(0.5);
+    -webkit-transform: translateZ(0) translateX(-100px) scaleX(0.5);
+    -moz-transform: translateZ(0) translateX(-100px) scaleX(0.5);
+    -ms-transform: translateZ(0) translateX(-100px) scaleX(0.5);
+    -o-transform: translateZ(0) translateX(-100px) scaleX(0.5);
 }
 
 .not-visible:nth-of-type(2n+1) {
-    transform: translateZ(0) translateX(200px) scaleX(0.5);
-    -webkit-transform: translateZ(0) translateX(200px) scaleX(0.5);
-    -moz-transform: translateZ(0) translateX(200px) scaleX(0.5);
-    -ms-transform: translateZ(0) translateX(200px) scaleX(0.5);
-    -o-transform: translateZ(0) translateX(200px) scaleX(0.5);
+    transform: translateZ(0) translateX(100px) scaleX(0.5);
+    -webkit-transform: translateZ(0) translateX(100px) scaleX(0.5);
+    -moz-transform: translateZ(0) translateX(100px) scaleX(0.5);
+    -ms-transform: translateZ(0) translateX(100px) scaleX(0.5);
+    -o-transform: translateZ(0) translateX(100px) scaleX(0.5);
 }
 
 .pj-btn {
