@@ -5,20 +5,20 @@
     src: url("./assets/police/Dosis-VariableFont_wght.ttf");
 }
 
-@font-face{
+/* @font-face{
     font-family: "HammerSmith";
     src: url("./assets/police/HammersmithOne-Regular.ttf");
-}
+} */
 
 @font-face{
     font-family: "KronaOne";
     src: url("./assets/police/KronaOne-Regular.ttf");
 }
 
-@font-face{
+/* @font-face{
     font-family: "Anton";
     src: url("./assets/police/Anton-Regular.ttf");
-}
+} */
 
 html, body { height: 100%; }
 body { 

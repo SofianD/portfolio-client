@@ -8,33 +8,13 @@
     text-shadow: 0 0 5px #ffffff;
 }
 
-.font-Anton{
-    font-family: 'Anton', 'sans-serif';
+.font-main-title {
     font-size: 6rem;
-    text-shadow: none;
 }
 
-/* #home-navbar {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    color: white;
+.font-subtitle {
+    font-size: 3rem;
 }
-
-.link-container a:hover {
-    transform: scale(1.2);
-    color: inherit;
-    transition: 0.2s;
-}
-
-.link-container {
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.link-container a {
-    margin-left: 15px;
-} */
 
 .skills-overview-container {
     flex-direction: row;
@@ -92,7 +72,6 @@
 }
 
 .scene {
-    /* margin: 0 auto; */
     width: 500px;
     height: 140px;
     position: relative;
@@ -117,7 +96,6 @@
     width: 500px;
     filter: saturate(120%) contrast(1.3);
     -webkit-filter: saturate(120%) contrast(1.3);
-    /* backface-visibility: hidden; */
 }
 
 .carousel__cell:nth-child(1) {
@@ -187,12 +165,18 @@
         margin-left: 0;
     }
 
-    .font-Anton {
-        font-family: 'Anton', 'sans-serif';
+    .font-main-title {
         font-size: 3rem;
+    }
+
+    .font-subtitle {
+        font-size: 2rem;
     }
 }
 
+/* 
+    SECTION ANIMATION
+*/
 .marquee-anim {
     -webkit-animation: marquee-anim 10s linear infinite;
             animation: marquee-anim 10s linear infinite;
@@ -233,34 +217,3 @@
         transform: translateX(-100%);
     }
 }
-
-
-
-
-
-/* 
-.halo {
-    -webkit-animation: halo 4s linear infinite alternate;
-            animation: halo 4s linear infinite alternate;
-}
-
-@keyframes halo {
-    0% {
-        text-shadow: none;
-    }
-    20% {
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.05), 0 0 30px rgba(255, 255, 255, 0.1);
-    }
-    40% {
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.10), 0 0 30px rgba(255, 255, 255, 0.15);
-    }
-    60% {
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.20), 0 0 30px rgba(255, 255, 255, 0.3);
-    }
-    80% {
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.40), 0 0 30px rgba(255, 255, 255, 0.5);
-    }
-    100% {
-        text-shadow: 0 0 30px rgba(255, 255, 255, 0.50), 0 0 60px rgba(255, 255, 255, 0.6);
-    }
-} */
