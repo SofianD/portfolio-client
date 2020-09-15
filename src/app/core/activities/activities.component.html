@@ -1,10 +1,10 @@
-<div class="octocat-container">
+<!-- <div class="octocat-container">
     <img class="w-100" src="./assets/global/octocat.png" alt="">
-</div>
+</div> -->
 
-<div class="gh-photo-container">
+<!-- <div class="gh-photo-container">
     <img class="w-100" src="./assets/global/gh_photo.png" alt="">
-</div>
+</div> -->
 
 <div *ngIf="!isLoading" class="container head-container">
     <img class="head-img" src="./assets/activities/o.png" alt="">
@@ -30,8 +30,8 @@
 
 <div *ngIf="ghActivities.length === 0 && mode === 'activity'" class="container" style="height: 100vh;"></div>
 <div *ngIf="ghProjects.length === 0 && mode === 'projects'" class="container" style="height: 100vh;"></div>
-<div *ngIf="mode === 'projects' && ghProjects.length > 0" class="container text-focus-in" style="margin-top: 100px; min-height: 60%;">
-    <div class="row">
+<div *ngIf="mode === 'projects' && ghProjects.length > 0" class="container d-flex text-focus-in" style="margin-top: 100px; min-height: 40%;">
+    <div class="row mx-auto">
         <div *ngFor="let project of ghProjects" class="col-12 col-md-4 px-1 py-2 tracking-in-expand">
             <div class="border rounded p-1 bg-white shadow" style="height: 100%;">
                 <div class="d-flex mb-2 border-bottom" style="flex-direction: row; align-items: center; font-weight: 550;">
