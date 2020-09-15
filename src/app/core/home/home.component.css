@@ -11,7 +11,6 @@
 .font-Anton{
     font-family: 'Anton', 'sans-serif';
     font-size: 6rem;
-    text-rendering: geometricPrecision;
     text-shadow: none;
 }
 
