@@ -5,7 +5,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0px 3px 20px #000000;
-    text-shadow: 0 0 5px #ffffff !important;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+.font-Anton{
+    font-family: 'Anton', 'sans-serif';
+    font-size: 6rem;
+    text-rendering: geometricPrecision;
+    text-shadow: none;
 }
 
 /* #home-navbar {
@@ -179,6 +186,11 @@
 
     .link-container a {
         margin-left: 0;
+    }
+
+    .font-Anton {
+        font-family: 'Anton', 'sans-serif';
+        font-size: 3rem;
     }
 }
 
