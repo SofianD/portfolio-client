@@ -30,7 +30,7 @@
 
 <div *ngIf="ghActivities.length === 0 && mode === 'activity'" class="container" style="height: 100vh;"></div>
 <div *ngIf="ghProjects.length === 0 && mode === 'projects'" class="container" style="height: 100vh;"></div>
-<div *ngIf="mode === 'projects' && ghProjects.length > 0" class="container d-flex text-focus-in" style="margin-top: 100px; min-height: 40%;">
+<div *ngIf="mode === 'projects' && ghProjects.length > 0" class="container d-flex text-focus-in" style="margin-top: 100px; min-height: 50%;">
     <div class="row mx-auto">
         <div *ngFor="let project of ghProjects" class="col-12 col-md-4 px-1 py-2 tracking-in-expand">
             <div class="border rounded p-1 bg-white shadow" style="height: 100%;">
