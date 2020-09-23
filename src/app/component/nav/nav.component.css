@@ -1,5 +1,5 @@
 .navbar{
-    font-family: 'HammerSmith', sans-serif;
+    font-family: 'KronaOne', sans-serif;
     background-color: #ffffff;
     position: fixed;
     top: 0;
@@ -43,7 +43,8 @@ a {
 }
 
 .link-container a {
-    margin-left: 15px;
+    margin-left: 25px;
+    font-size: 0.8rem;
 }
 
 @media screen and (max-width: 991px) {

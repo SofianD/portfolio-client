@@ -16,23 +16,21 @@
     margin-top: 100px;
 }
 
-.octocat-container {
+/* .octocat-container {
     position: fixed;
     right: 10%;
     bottom: -800px;
     width: 200px;
     opacity: 0;
-    /* z-index: -1; */
-}
+} */
 
-.gh-photo-container {
+/* .gh-photo-container {
     position: fixed;
     left: 10%;
     bottom: -200px;
     width: 150px;
     opacity: 0;
-    /* z-index: -1; */
-}
+} */
 
 .list-style-type-dec {
     list-style-type: decimal-leading-zero;
